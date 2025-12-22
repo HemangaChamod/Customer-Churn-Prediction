@@ -32,5 +32,5 @@ A detailed project report including visualizations, methodology, and results can
 The complete analysis notebook is available [here](./Customer_Churn_Prediction_Notebook.ipynb).
 
 ## Web Application
-Try the live web application: 
+Try the live web application: https://customer-churn-prediction-rk6c.onrender.com
 
