@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Churn Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="page-layout">
+
+    <!-- LEFT ILLUSTRATION -->
+    <div class="illustration">
+        <img src="{{ url_for('static', filename='image.png') }}"
+             alt="Customer analytics illustration">
+    </div>
+
+    <!-- RIGHT FORM CARD -->
+    <div class="container">
+        <h1>Customer Churn Prediction</h1>
+        <p class="subtitle">
+            Enter customer details to estimate churn risk
+        </p>
+
+        <form action="/predict" method="post">
+
+            <div class="form-group">
+                <label for="tenure">Tenure (Months)</label>
+                <input type="number" id="tenure" name="tenure" min="0" required>
+            </div>
+
+            <div class="form-group">
+                <label for="monthlycharges">Monthly Charges (USD)</label>
+                <input type="number" step="0.01" id="monthlycharges" name="monthlycharges" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contract">Contract Type</label>
+                <select id="contract" name="contract" required>
+                    <option value="Month-to-month">Month-to-month</option>
+                    <option value="One year">One year</option>
+                    <option value="Two year">Two year</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="paymentmethod">Payment Method</label>
+                <select id="paymentmethod" name="paymentmethod" required>
+                    <option value="Electronic check">Electronic Check</option>
+                    <option value="Mailed check">Mailed Check</option>
+                    <option value="Bank transfer (automatic)">Bank Transfer</option>
+                    <option value="Credit card (automatic)">Credit Card</option>
+                </select>
+            </div>
+
+            <button type="submit">Predict Churn Risk</button>
+        </form>
+
+        {% if prediction_text %}
+        <div class="result-box {{ color }}">
+            <h3>{{ prediction_text }}</h3>
+            <p>Estimated Churn Probability: <strong>{{ probability }}%</strong></p>
+        </div>
+        {% endif %}
+    </div>
+
+</div>
+
+<footer>
+  <p>
+   
+    Developed by 
+    <a href="https://github.com/HemangaChamod/Customer-Churn-Prediction" target="_blank">
+      Chamod Lakshitha
+    </a>
+  </p>
+</footer>
+
+</body>
+
+</html>
