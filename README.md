@@ -34,5 +34,5 @@ The complete analysis notebook is available [here](./Customer_Churn_Prediction_N
 ## Web Application
 Try the live web application: https://customer-churn-prediction-rk6c.onrender.com
 
-Note: The application is hosted on Render. If it has been inactive for some time, the server may take 20–50 seconds to wake up on the first request.
+Note: The application is hosted on Render. If it has been inactive for some time, the server may take 20–50 seconds to wake up on the first request. During this time, a loading screen may appear.
 
