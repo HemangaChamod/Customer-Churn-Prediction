@@ -9,22 +9,6 @@ The project includes:
 - **Web-based Frontend**: Flask application for user input and displaying predictions.
 - **Visualization**: Display predicted churn probabilities for better insights.
 
-## Key Features
-
-### Input Features:
-- **Tenure (Months)**  
-- **Monthly Charges ($)**  
-- **Contract Type**: Month-to-month, One year, Two year  
-- **Payment Method**: Electronic Check, Mailed Check, Bank Transfer, Credit Card  
-
-### Predictions:
-- **Binary Churn Outcome**: Customer likely to stay / Customer likely to churn  
-- **Churn Probability (%)**
-
-### Web Frontend:
-- User-friendly form for entering customer details  
-- Clear display of results with actionable recommendations
-
 ## Project Report
 A detailed project report including visualizations, methodology, and results can be found [here](./Customer_Churn_Report.pdf).
 
