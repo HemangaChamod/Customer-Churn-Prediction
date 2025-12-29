@@ -6,7 +6,7 @@ This project predicts customer churn for subscription-based services (e.g., tele
 The project includes:
 - **Data Cleaning and Feature Engineering**: Prepare and optimize customer data for modeling.
 - **Predictive Modeling**: Build models using Logistic Regression and Decision Trees.
-- **Web-based Frontend**: Flask application for user input and displaying predictions.
+- **Web-based Frontend**: Originally developed in Flask, later converted to Streamlit for a modern, interactive, and easy-to-deploy dashboard for user input and displaying predictions.
 - **Visualization**: Display predicted churn probabilities for better insights.
 
 ## Project Report
