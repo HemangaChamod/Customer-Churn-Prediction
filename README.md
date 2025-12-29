@@ -16,7 +16,6 @@ A detailed project report including visualizations, methodology, and results can
 The complete analysis notebook is available [here](./Customer_Churn_Prediction_Notebook.ipynb).
 
 ## Web Application
-Try the live web application: https://customer-churn-prediction-rk6c.onrender.com
+Try the live web application: https://customer-churn-prediction-chamod.streamlit.app
 
-Note: The application is hosted on Render. If it has been inactive for some time, the server may take 20–50 seconds to wake up on the first request. During this time, a loading screen may appear.
 
