@@ -72,7 +72,8 @@ tenure = st.sidebar.slider(
     "Tenure (Months)",
     min_value=0,
     max_value=72,
-    value=12
+    value=12,
+    help="How long the customer has been with the company"
 )
 
 monthly_charges = st.sidebar.number_input(
@@ -83,7 +84,8 @@ monthly_charges = st.sidebar.number_input(
 
 contract = st.sidebar.selectbox(
     "Contract Type",
-    ["Month-to-month", "One year", "Two year"]
+    ["Month-to-month", "One year", "Two year"],
+    help="Type of contract the customer has signed."
 )
 
 payment_method = st.sidebar.selectbox(
@@ -93,7 +95,8 @@ payment_method = st.sidebar.selectbox(
         "Mailed check",
         "Bank transfer",
         "Credit card"
-    ]
+    ],
+    help="Method used by the customer to pay their monthly bills."
 )
 
 predict_btn = st.sidebar.button("🔍 Predict Churn Risk")
@@ -170,4 +173,5 @@ st.markdown("---")
 st.caption(
     "Machine Learning Powered Customer Churn Prediction | Developed by Chamod Lakshitha"
 )
+
 
