@@ -1,6 +1,7 @@
 import streamlit as st
 import pickle
 import pandas as pd
+import time
 
 # Page Configuration
 st.set_page_config(
@@ -64,7 +65,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-
+# Sidebar Inputs
 st.sidebar.header("Customer Information")
 
 tenure = st.sidebar.slider(
@@ -97,7 +98,7 @@ payment_method = st.sidebar.selectbox(
 
 predict_btn = st.sidebar.button("🔍 Predict Churn Risk")
 
-
+# Layout
 left_col, right_col = st.columns([1.2, 1])
 
 with left_col:
@@ -126,8 +127,21 @@ with right_col:
         prediction = model.predict(input_data)[0]
         probability = model.predict_proba(input_data)[0][1] * 100
 
-        st.progress(int(probability))
+        # Dynamic decimal counter
+        placeholder = st.empty()
+        step = 0.1  # smaller step for smooth decimal increments
+        current = 0.0
+        while current < probability:
+            placeholder.progress(int(current))  # progress bar needs int
+            placeholder.metric("Estimated Churn Probability", f"{current:.2f}%")
+            current += step
+            time.sleep(0.00001)  
 
+        # Ensure final value matches exactly
+        placeholder.progress(int(probability))
+        placeholder.metric("Estimated Churn Probability", f"{probability:.2f}%")
+
+        # Show risk message
         if prediction == 1:
             st.markdown(
                 '<div class="risk-high">⚠️ High Churn Risk</div>',
@@ -145,11 +159,6 @@ with right_col:
             st.write(
                 "This customer is likely to remain loyal based on current behavior."
             )
-
-        st.metric(
-            label="Estimated Churn Probability",
-            value=f"{probability:.2f}%"
-        )
     else:
         st.info(
             "Enter customer details and click **Predict Churn Risk** to see results."
