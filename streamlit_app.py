@@ -135,7 +135,7 @@ with right_col:
             placeholder.progress(int(current))  # progress bar needs int
             placeholder.metric("Estimated Churn Probability", f"{current:.2f}%")
             current += step
-            time.sleep(0.00001)  
+            time.sleep(0.0001)  
 
         # Ensure final value matches exactly
         placeholder.progress(int(probability))
@@ -170,3 +170,4 @@ st.markdown("---")
 st.caption(
     "Machine Learning Powered Customer Churn Prediction | Developed by Chamod Lakshitha"
 )
+
