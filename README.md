@@ -16,7 +16,8 @@ A detailed project report including visualizations, methodology, and results can
 The complete analysis notebook is available [here](./Customer_Churn_Prediction_Notebook.ipynb).
 
 ## Power BI Dashboard
-The complete Power BI dashboard can be accessed [Download Power BI Dashboard(https://github.com/hemangachamod/REPO/raw/main/Customer_Churn_PowerBI_Dashboard.pbix)
+The complete Power BI dashboard can be accessed here:  
+[Download Power BI Dashboard](https://github.com/hemangachamod/REPO/raw/main/Customer_Churn_Analysis_Power_BI_Dashboard.pbix)
 
 ## Web Application
 Try the live web application: https://customer-churn-prediction-chamod.streamlit.app
